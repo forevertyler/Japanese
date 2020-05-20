@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/mormalize.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<script src="js/fontsize.js"></script>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<style>
+	
+		#top-line {
+			width:100%;
+			height:3px;
+			line-height:0;
+			font-size:0;
+			overflow:hidden;
+			text-align:center;
+			z-index:1;
+			background-color:#0fa6ea;
+			background:-webkit-linear-gradient(left,rgba(15,166,234,1) 0,rgba(89,204,24,1) 10%,rgba(15,166,234,1) 60%,rgba(15,166,234,1) 100%);
+			background:-moz-linear-gradient(left,rgba(15,166,234,1) 0,rgba(89,204,24,1) 10%,rgba(15,166,234,1) 60%,rgba(15,166,234,1) 100%);
+			background:-ms-linear-gradient(left,rgba(15,166,234,1) 0,rgba(89,204,24,1) 10%,rgba(15,166,234,1) 60%,rgba(15,166,234,1) 100%);
+			background:linear-gradient(left,rgba(15,166,234,1) 0,rgba(89,204,24,1) 10%,rgba(15,166,234,1) 60%,rgba(15,166,234,1) 100%);
+		}
+	
+		#tabs-container {
+			/*height:400px;*/
+		}
+		#tabs {
+			border-top:2px solid #9ac7ed;
+			background:url(images/headbg.png) no-repeat left top #f9fafa;
+			background-size:auto 100%;
+			width:100%;
+			height:38px;
+			overflow:hidden;
+		}
+		#tabs a {
+			font-weight:normal;
+			text-align:center;
+			float:left;
+			width:64px;
+			height:38px;
+			line-height:38px;
+			color:#2a70be;
+			text-decoration:none;
+		}
+		#tabs a.active {
+			border-top:2px solid #2a70be;
+			margin-top:-2px;
+			background-image:url(images/tab_ui.png);
+			background-repeat:no-repeat;
+			-webkit-background-size:64px 39px;
+			-moz-background-size:64px 39px;
+			-o-background-size:64px 39px;
+			background-size:64px 39px;
+			background-position:left top;
+			color:#c14545;
+		}
+		
+		.word-list {
+			padding:10px;
+			border-bottom:1px solid #eceef0;
+			box-shadow:0 1px 1px #fff;
+			font-weight:normal;
+			font-size:80%;
+
+		}
+		.start{
+			display: none;
+		}
+
+	</style>
+	
+</head>
+<body>
+
+	<div class="jq22"></div>
+	<div id="top-line"></div>
+
+	<div id="tabs">
+
+		<div class="swiper-wrapper">
+		 
+		  
+		</div>
+	</div>
+
+<div id="tabs-container" class="swiper-container">
+    
+    <div class="swiper-wrapper">
+      
+    
+    </div>
+  </div>
+	
+
+	<script>
+		window.onload = function() {
+		    var navSwiper = new Swiper('#header', {
+		        freeMode: true,
+		        slidesPerView: 'auto',
+		        freeModeSticky: true,
+		    });
+		     var navSwiper = new Swiper('#tabs', {
+		        freeMode: true,
+		        slidesPerView: 'auto',
+		        freeModeSticky: true,
+		    });
+			
+		
+		    var tabsSwiper = new Swiper('#tabs-container', {
+		        speed: 500,
+		        on: {
+		            slideChangeTransitionStart: function() {
+		                $("#tabs .active").removeClass('active');
+		                $("#tabs a").eq(this.activeIndex).addClass('active');
+		            }
+		        }
+		    })
+		    $("#tabs a").on('click', function(e) {
+		        e.preventDefault()
+		        $("#tabs .active").removeClass('active')
+		        $(this).addClass('active')
+		        tabsSwiper.slideTo($(this).index())
+		    })
+
+
+
+}
+
+          
+	</script>
+	<script>
+		
+		    /*
+            * @Author: tyler
+            * @Date:   2018-10-02 12:50
+            * @Last Modified by:   tyler
+            * @Last Modified time: 
+            */
+            var book = [
+                {"class" : "第 1 課",
+                 "word" : [
+                    {
+                        "jp" : 'わたし',
+                        "jy" : '私',
+                        "cn" : '我',
+                        "st" : 'y'
+                    },
+                    
+                    {
+                        "jp" : 'わたしたち',
+                        "jy" : '私逹',
+                        "cn" : '我们',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'あなた',
+                        "jy" : '',
+                        "cn" : '你',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'あのひと',
+                        "jy" : '',
+                        "cn" : '那个人',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'わたしi',
+                        "jy" : '私i',
+                        "cn" : '我i',
+                        "st" : 'y'
+                    },
+                    
+                    {
+                        "jp" : 'わたしたちi',
+                        "jy" : '私逹i',
+                        "cn" : '我们i',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'あなたi',
+                        "jy" : '',
+                        "cn" : '你i',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'あのひとi',
+                        "jy" : '',
+                        "cn" : '那个人i',
+                        "st" : 'y'
+                    }
+                ]
+            },
+            {"class" : "第 2 課",
+                 "word" : [
+                    {
+                        "jp" : 'わたし2',
+                        "jy" : '私2',
+                        "cn" : '我2',
+                        "st" : 'y'
+                    },
+                    
+                    {
+                        "jp" : 'わたしたち2',
+                        "jy" : '私逹2',
+                        "cn" : '我们2',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'あなた2',
+                        "jy" : '',
+                        "cn" : '你2',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'あのひと2',
+                        "jy" : '',
+                        "cn" : '那个人2',
+                        "st" : 'y'
+                    }
+                ]
+            },
+            {"class" : "第 3 課",
+                 "word" : [
+                    {
+                        "jp" : 'わたし3',
+                        "jy" : '私3',
+                        "cn" : '我3',
+                        "st" : 'y'
+                    },
+                    
+                    {
+                        "jp" : 'わたしたち3',
+                        "jy" : '私逹3',
+                        "cn" : '我们3',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'あなた3',
+                        "jy" : '',
+                        "cn" : '你3',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'あのひと3',
+                        "jy" : '',
+                        "cn" : '那个人3',
+                        "st" : 'y'
+                    }
+                ]
+            }
+        
+           ];
+
+     $(function() {
+     
+
+     	
+          var SmalltypeName = [];     
+          $.each(book,function (i,item) { //循环得出“class”
+              SmalltypeName.push(item.class);
+
+              var aa ='<a href="#" class="swiper-slide">' + item["class"] + '</a>'
+              var w = '<div id="item'+i+ '" class="swiper-slide ">' +'</div>'
+              $("#tabs .swiper-wrapper").append(aa);
+              $("#tabs-container .swiper-wrapper").append(w);
+     
+              $.each(item['word'],function (j,item2) {//循环得出“word”
+              	  console.log(item2)
+                 var bb =  ' <div class="swiper-slide">'+
+                  '<ul class="word-list">'+
+                  '<li class="ub-f1 tx-c">'+item2["jp"]+'</li>' +
+                  '<li class="ub-f1 tx-c">'+item2["jy"]+'</li>' +
+                  '<li class="ub-f1 tx-c">'+item2["cn"]+'</li>' +
+                  '</ul>'+
+                  '</div>'
+
+                  $("#item"+i).append(bb);                                  
+              });
+          });
+        });
+	</script>
+
+</body>
+</html>
+
