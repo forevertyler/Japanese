@@ -2,77 +2,16 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>课程</title>
 	<link rel="stylesheet" href="css/mormalize.css">
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/course.css">
+  <link rel="stylesheet" href="css/index.css">
 	<script src="js/fontsize.js"></script>
 	<script src="js/jquery-1.11.3.min.js"></script>
 	<script src="js/swiper.min.js"></script>
-	<style>
-	
-		#top-line {
-			width:100%;
-			height:3px;
-			line-height:0;
-			font-size:0;
-			overflow:hidden;
-			text-align:center;
-			z-index:1;
-			background-color:#0fa6ea;
-			background:-webkit-linear-gradient(left,rgba(15,166,234,1) 0,rgba(89,204,24,1) 10%,rgba(15,166,234,1) 60%,rgba(15,166,234,1) 100%);
-			background:-moz-linear-gradient(left,rgba(15,166,234,1) 0,rgba(89,204,24,1) 10%,rgba(15,166,234,1) 60%,rgba(15,166,234,1) 100%);
-			background:-ms-linear-gradient(left,rgba(15,166,234,1) 0,rgba(89,204,24,1) 10%,rgba(15,166,234,1) 60%,rgba(15,166,234,1) 100%);
-			background:linear-gradient(left,rgba(15,166,234,1) 0,rgba(89,204,24,1) 10%,rgba(15,166,234,1) 60%,rgba(15,166,234,1) 100%);
-		}
-	
-		#tabs-container {
-			/*height:400px;*/
-		}
-		#tabs {
-			border-top:2px solid #9ac7ed;
-			background:url(images/headbg.png) no-repeat left top #f9fafa;
-			background-size:auto 100%;
-			width:100%;
-			height:38px;
-			overflow:hidden;
-		}
-		#tabs a {
-			font-weight:normal;
-			text-align:center;
-			float:left;
-			width:64px;
-			height:38px;
-			line-height:38px;
-			color:#2a70be;
-			text-decoration:none;
-		}
-		#tabs a.active {
-			border-top:2px solid #2a70be;
-			margin-top:-2px;
-			background-image:url(images/tab_ui.png);
-			background-repeat:no-repeat;
-			-webkit-background-size:64px 39px;
-			-moz-background-size:64px 39px;
-			-o-background-size:64px 39px;
-			background-size:64px 39px;
-			background-position:left top;
-			color:#c14545;
-		}
-		
-		.word-list {
-			padding:10px;
-			border-bottom:1px solid #eceef0;
-			box-shadow:0 1px 1px #fff;
-			font-weight:normal;
-			font-size:80%;
 
-		}
-		.start{
-			display: none;
-		}
-
-	</style>
 	
 </head>
 <body>
@@ -81,21 +20,34 @@
 	<div id="top-line"></div>
 
 	<div id="tabs">
-
 		<div class="swiper-wrapper">
-		 
 		  
 		</div>
-	</div>
+</div>
 
 <div id="tabs-container" class="swiper-container">
-    
     <div class="swiper-wrapper">
-      
-    
+
     </div>
-  </div>
-	
+</div>
+<footer>
+  <a href="index.html">
+    <img src="images/icon1-1.jpg" alt="">
+    <p >首页</p>
+  </a>
+  <a href="course.html">
+    <img src="images/icon2-2.jpg" alt="">
+    <p class="active">课程</p>
+  </a>
+  <a href="">
+    <img src="images/icon3-1.jpg" alt="">
+    <p>背词</p>
+  </a>
+  <a href="">
+    <img src="images/icon4-1.jpg" alt="">
+    <p>趣事</p>
+  </a>
+</footer>
 
 	<script>
 		window.onload = function() {
@@ -110,9 +62,9 @@
 		        freeModeSticky: true,
 		    });
 			
-		
+		    $("#tabs a").eq(0).addClass('active');
 		    var tabsSwiper = new Swiper('#tabs-container', {
-		        speed: 500,
+		        speed: 300,
 		        on: {
 		            slideChangeTransitionStart: function() {
 		                $("#tabs .active").removeClass('active');
@@ -137,10 +89,10 @@
 		
 		    /*
             * @Author: tyler
-            * @Date:   2018-10-02 12:50
+            * @Date:   2019-10-02 12:50
             * @Last Modified by:   tyler
-            * @Last Modified time: 
-            */
+            * @Last Modified time: 2020-5-22
+        */
             var book = [
                 {"class" : "第 1 課",
                  "word" : [
@@ -254,7 +206,6 @@
                     }
                 ]
             }
-        
            ];
 
      $(function() {
@@ -287,5 +238,6 @@
 	</script>
 
 </body>
+
 </html>
 
