@@ -106,6 +106,7 @@
      position: fixed;
      left:0;
      bottom:0;
+     z-index: 3;
      width: 6.4rem;
      height: 0.86rem;
      background: #fff;
