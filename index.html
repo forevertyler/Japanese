@@ -17,15 +17,45 @@
 
 <meta name="keywords" content="" />
 <meta name="description" content="" />
-
+<style>
+	.bigCover{
+		position: fixed;
+		top:0;
+		left:0;
+		z-index: 100;
+		width: 100vw;
+		height: 100vh;
+		background: #000;
+		opacity:0.85;
+		padding-top: .8rem;
+		display: none;
+	}
+	.bigCover a,.bigCover p{
+		width: 50%;
+		height: .6rem;
+		font-size: .3rem;
+		margin: .4rem auto;
+		background: #1f3f7c;
+		text-align: center;
+		line-height: .6rem;
+		border-radius: .3rem;
+		color:#fff;
+	}
+</style>
 </head>
+<div class="bigCover">
+
+	<a href="">根据假名回忆汉语</a>
+	<a href="">根据汉语回忆日语</a>
+	<p>改变主意不想背了</p>
+</div>
 <div class="banner">
 	<div class="swiper-container1">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
       	<img src="images/banner1.jpg" alt="富士山">
       </div>
-      <div class="swiper-slide">
+      <div class="swiper-slide">     
       	<img src="images/banner1.jpg" alt="富士山">
       </div>
       <div class="swiper-slide">
@@ -56,8 +86,8 @@
 				</div>
 			</a>
 		</li>
-		<li>
-			<a href="rember.html">
+		<li class="remember">
+			<a href="javascript:void(0);">
 				<div>
 					<p class="tit">背单词</p>
 					<p class="tit-con">坚持不懈</p>
@@ -79,7 +109,7 @@
 			</a>
 		</li>
 		<li>
-			<a href="rember.html">
+			<a href="">
 				<div>
 					<p class="tit">待定</p>
 					<p class="tit-con">勤学好问</p>
@@ -107,7 +137,7 @@
 		<img src="images/icon2-1.jpg" alt="">
 		<p>课程</p>
 	</a>
-	<a href="">
+	<a href="javascript:void(0);">
 		<img src="images/icon3-1.jpg" alt="">
 		<p>背词</p>
 	</a>
@@ -124,6 +154,14 @@ var swiper = new Swiper('.swiper-container1', {
 
   loop : true
 });
+$(".remember").on('click', function(e) {
+
+    $(".bigCover").show();
+})
+$(".bigCover p").on('click', function(e) {
+
+    $(".bigCover").hide();
+})
 </script>
 
 
