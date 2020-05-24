@@ -84,6 +84,29 @@
      width: 100%;
      height: 100%;
 }
+.bigCover{
+          position: fixed;
+          top:0;
+          left:0;
+          z-index: 100;
+          width: 100vw;
+          height: 100vh;
+          background: #000;
+          opacity:0.85;
+          padding-top: .8rem;
+          display: none;
+     }
+     .bigCover a,.bigCover p{
+          width: 50%;
+          height: .6rem;
+          font-size: .3rem;
+          margin: .4rem auto;
+          background: #1f3f7c;
+          text-align: center;
+          line-height: .6rem;
+          border-radius: .3rem;
+          color:#fff;
+     }
 
 /*course*/
 

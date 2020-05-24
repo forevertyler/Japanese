@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>课程</title>
-	<link rel="stylesheet" href="css/mormalize.css">
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/swiper.min.css">
+  <meta charset="UTF-8">
+  <title>课程</title>
+  <link rel="stylesheet" href="css/mormalize.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/course.css">
   <link rel="stylesheet" href="css/index.css">
-	<script src="js/fontsize.js"></script>
-	<script src="js/jquery-1.11.3.min.js"></script>
-	<script src="js/swiper.min.js"></script>
+  <script src="js/fontsize.js"></script>
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/swiper.min.js"></script>
 
-	
+  
 </head>
 
 <body>
 
-	<div class="jq22"></div>
-<!-- 	<div id="top-line"></div> -->
+  <div class="jq22"></div>
+<!--  <div id="top-line"></div> -->
 
-	<div id="tabs">
-		<div class="swiper-wrapper">
-		  
-		</div>
+  <div id="tabs">
+    <div class="swiper-wrapper">
+      
+    </div>
 </div>
 <div id="tabs1"></div>
 <div id="tabs-container" class="swiper-container">
@@ -35,13 +35,13 @@
 <footer>
   <a href="index.html">
     <img src="images/icon1-1.jpg" alt="">
-    <p >首页</p>
+    <p>首页</p>
   </a>
   <a href="course.html">
     <img src="images/icon2-2.jpg" alt="">
     <p class="active">课程</p>
   </a>
-  <a href="">
+  <a class="remember" href="javascript:void(0);">
     <img src="images/icon3-1.jpg" alt="">
     <p>背词</p>
   </a>
@@ -51,43 +51,43 @@
   </a>
 </footer>
 
-	<script>
-		window.onload = function() {
-		 
-		     var navSwiper = new Swiper('#tabs', {
-		        freeMode: true,
-		        slidesPerView: 'auto',
-		        freeModeSticky: true,
-		    });
-			
-		    $("#tabs a").eq(0).addClass('active');
+  <script>
+    window.onload = function() {
+     
+         var navSwiper = new Swiper('#tabs', {
+            freeMode: true,
+            slidesPerView: 'auto',
+            freeModeSticky: true,
+        });
+      
+        $("#tabs a").eq(0).addClass('active');
 
-		    var tabsSwiper = new Swiper('#tabs-container', {
-		        speed: 300,
-		        on: {
-		            slideChangeTransitionStart: function() {
-		                $("#tabs .active").removeClass('active');
-		                $("#tabs a").eq(this.activeIndex).addClass('active');
-		            }
-		        }
-		    })
-		    $("#tabs a").on('click', function(e) {
+        var tabsSwiper = new Swiper('#tabs-container', {
+            speed: 300,
+            on: {
+                slideChangeTransitionStart: function() {
+                    $("#tabs .active").removeClass('active');
+                    $("#tabs a").eq(this.activeIndex).addClass('active');
+                }
+            }
+        })
+        $("#tabs a").on('click', function(e) {
             $("html, body").scrollTop(1);
-		        e.preventDefault()
-		        $("#tabs .active").removeClass('active')
-		        $(this).addClass('active')
-		        tabsSwiper.slideTo($(this).index())
-		    })
+            e.preventDefault()
+            $("#tabs .active").removeClass('active')
+            $(this).addClass('active')
+            tabsSwiper.slideTo($(this).index())
+        })
 
 
 
 }
 
           
-	</script>
-	<script>
-		
-		    /*
+  </script>
+  <script>
+    
+        /*
             * @Author: tyler
             * @Date:   2019-10-02 12:50
             * @Last Modified by:   tyler
@@ -606,7 +606,7 @@
      $(function() {
      
 
-     	
+      
           var SmalltypeName = [];     
           $.each(book,function (i,item) { //循环得出“class”
               SmalltypeName.push(item.class);
@@ -617,7 +617,7 @@
               $("#tabs-container .swiper-wrapper").append(w);
      
               $.each(item['word'],function (j,item2) {//循环得出“word”
-              	  console.log(item2)
+                  console.log(item2)
                  var bb =  ' <div class="swiper-slide">'+
                   '<ul class="word-list">'+
                   '<li class="ub-f1 tx-c">'+item2["jp"]+'</li>' +
@@ -630,9 +630,9 @@
               });
           });
         });
-	</script>
-
+  </script>
+<script src="js/cover.js"></script>
+<script src="js/index.js"></script>
 </body>
 
 </html>
-

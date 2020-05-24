@@ -15,40 +15,14 @@
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/swiper.min.js"></script>
 
+
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <style>
-	.bigCover{
-		position: fixed;
-		top:0;
-		left:0;
-		z-index: 100;
-		width: 100vw;
-		height: 100vh;
-		background: #000;
-		opacity:0.85;
-		padding-top: .8rem;
-		display: none;
-	}
-	.bigCover a,.bigCover p{
-		width: 50%;
-		height: .6rem;
-		font-size: .3rem;
-		margin: .4rem auto;
-		background: #1f3f7c;
-		text-align: center;
-		line-height: .6rem;
-		border-radius: .3rem;
-		color:#fff;
-	}
+	
 </style>
 </head>
-<div class="bigCover">
 
-	<a href="">根据假名回忆汉语</a>
-	<a href="">根据汉语回忆日语</a>
-	<p>改变主意不想背了</p>
-</div>
 <div class="banner">
 	<div class="swiper-container1">
     <div class="swiper-wrapper">
@@ -154,18 +128,13 @@ var swiper = new Swiper('.swiper-container1', {
 
   loop : true
 });
-$(".remember").on('click', function(e) {
 
-    $(".bigCover").show();
-})
-$(".bigCover p").on('click', function(e) {
-
-    $(".bigCover").hide();
-})
 </script>
 
 
 
+<script src="js/cover.js"></script>
+<script src="js/index.js"></script>
 
 </body>
 </html>
