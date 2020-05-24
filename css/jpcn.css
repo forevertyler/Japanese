@@ -72,6 +72,10 @@
 }
  .startcn,.txt,.answerTxt{
      display: none;
+     
+}
+.startcn,.txt,.answerTxt p{
+  font-size: .2rem;
 }
  .select {
      display: inline-block;
@@ -117,8 +121,7 @@
  .select select:focus {
      outline: none;
 }
- .txt,.answerTxt{
+ .txt,.answerTxt p{
      font-size: 0.18rem;
      margin-left: 0.2rem;
 }
- 
