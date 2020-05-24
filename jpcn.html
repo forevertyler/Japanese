@@ -4,73 +4,15 @@
   <meta charset="UTF-8">
   <title>Document</title>
   <link rel="stylesheet" href="css/mormalize.css">
-  <link rel="stylesheet" href="css/animate.css">
-  <link rel="stylesheet" href="css/swiper.min.css">
-  <script src="js/fontsize.js"></script>
-  <script src="js/jquery-1.11.3.min.js"></script>
-  <script src="js/swiper.min.js"></script>
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/jpcn.css">
+<script src="js/fontsize.js"></script>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/swiper.min.js"></script>
   <style>
-  
-    #top-line {
-      width:100%;
-      height:3px;
-      line-height:0;
-      font-size:0;
-      overflow:hidden;
-      text-align:center;
-      z-index:1;
-      background-color:#0fa6ea;
-      background:-webkit-linear-gradient(left,rgba(15,166,234,1) 0,rgba(89,204,24,1) 10%,rgba(15,166,234,1) 60%,rgba(15,166,234,1) 100%);
-      background:-moz-linear-gradient(left,rgba(15,166,234,1) 0,rgba(89,204,24,1) 10%,rgba(15,166,234,1) 60%,rgba(15,166,234,1) 100%);
-      background:-ms-linear-gradient(left,rgba(15,166,234,1) 0,rgba(89,204,24,1) 10%,rgba(15,166,234,1) 60%,rgba(15,166,234,1) 100%);
-      background:linear-gradient(left,rgba(15,166,234,1) 0,rgba(89,204,24,1) 10%,rgba(15,166,234,1) 60%,rgba(15,166,234,1) 100%);
-    }
-  
-    #tabs-container {
-      /*height:400px;*/
-    }
-    #tabs {
-      border-top:2px solid #9ac7ed;
-      background:url(images/headbg.png) no-repeat left top #f9fafa;
-      background-size:auto 100%;
-      width:100%;
-      height:38px;
-      overflow:hidden;
-    }
-    #tabs a {
-      font-weight:normal;
-      text-align:center;
-      float:left;
-      width:64px;
-      height:38px;
-      line-height:38px;
-      color:#2a70be;
-      text-decoration:none;
-    }
-    #tabs a.active {
-      border-top:2px solid #2a70be;
-      margin-top:-2px;
-      background-image:url(images/tab_ui.png);
-      background-repeat:no-repeat;
-      -webkit-background-size:64px 39px;
-      -moz-background-size:64px 39px;
-      -o-background-size:64px 39px;
-      background-size:64px 39px;
-      background-position:left top;
-      color:#c14545;
-    }
-    
-    .word-list {
-      padding:10px;
-      border-bottom:1px solid #eceef0;
-      box-shadow:0 1px 1px #fff;
-      font-weight:normal;
-      font-size:80%;
 
-    }
-    .startcn,.txt,.answerTxt{
-      display: none;
-    }
 
   </style>
   
@@ -78,13 +20,14 @@
 <body>
 
   <div>
-    <audio src='' autoplay class="audio"></audio>
-    <select class="selectNum"></select>
-    <button class="cnjp">假名译汉</button>
-    <button class="startcn">下一个</button>
+    <!-- <audio src='' autoplay class="audio"></audio> -->
+    <p class="tit">选择需要复习的课程吧~</p>
+    <div class="select"><select class="selectNum"></select></div>
+    <p class="cnjp">开始</p>
+    <p class="startcn">下一个</p>
     <div class="txt"></div>
     <div id="answer">
-        <button class="answer">答案</button>
+        <p class="answer">答案</p>
 
       <div class="answerTxt">
         <p class="answerTxtjp"></p>
@@ -92,6 +35,24 @@
     </div>
   
   </div>
+  <footer>
+    <a href="index.html">
+        <img src="images/icon1-1.jpg" alt="">
+        <p>首页</p>
+    </a>
+    <a href="course.html">
+        <img src="images/icon2-1.jpg" alt="">
+        <p>课程</p>
+    </a>
+    <a class="remember" href="javascript:void(0);">
+        <img src="images/icon3-2.jpg" alt="">
+        <p class="active">背词</p>
+    </a>
+    <a href="">
+        <img src="images/icon4-1.jpg" alt="">
+        <p>趣事</p>
+    </a>
+</footer>
   
 
   <script>
@@ -158,43 +119,463 @@
                     },
                     {
                         "jp" : 'あなた',
-                        "jy" : '',
+                        "jy" : 'あなた',
                         "cn" : '你',
                         "st" : 'y'
                     },
                     {
                         "jp" : 'あのひと',
-                        "jy" : '',
+                        "jy" : 'あのひと',
                         "cn" : '那个人',
                         "st" : 'y'
+                    },
+                    {
+                        "jp" : 'みなさん',
+                        "jy" : '皆さん',
+                        "cn" : '大家',
+                        "st" : 'y'
+                    },
+                    
+                    {
+                        "jp" : 'せんせい',
+                        "jy" : '先生',
+                        "cn" : '老师',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'さん',
+                        "jy" : 'さん',
+                        "cn" : '先生、夫人、小姐 ',
+                        "st" : 'y'
+                    },
+
+                    
+                    {
+                        "jp" : 'けんしゅうせい',
+                        "jy" : '研修生',
+                        "cn" : '研修生',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'だれ',
+                        "jy" : '誰',
+                        "cn" : '谁',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'どなた',
+                        "jy" : 'どなた',
+                        "cn" : '哪位',
+                        "st" : 'y'
+                    },
+                    
+                    {
+                        "jp" : 'わたしたちi',
+                        "jy" : '私逹i',
+                        "cn" : '我们i',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'はい',
+                        "jy" : 'はい',
+                        "cn" : '是',
+                        "st" : 'y'
+                    },
+                    
+                    
+                    {
+                        "jp" : 'いいえ',
+                        "jy" : 'いいえ',
+                        "cn" : '不是',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'でんき',
+                        "jy" : '電気',
+                        "cn" : '电气',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'きかい',
+                        "jy" : '機械',
+                        "cn" : '机械',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'じどうしゃ',
+                        "jy" : '自動車',
+                        "cn" : '汽车',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'でんき',
+                        "jy" : '電気',
+                        "cn" : '电气',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'コンピューター',
+                        "jy" : '',
+                        "cn" : '计算机',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'せんもん',
+                        "jy" : '専門',
+                        "cn" : '专业',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'さい',
+                        "jy" : '歳',
+                        "cn" : '岁',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'なんさい',
+                        "jy" : '何歳',
+                        "cn" : '几岁',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'おいくつ',
+                        "jy" : 'おいくつ',
+                        "cn" : '多大岁数',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'にほん',
+                        "jy" : '日本',
+                        "cn" : '日本',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'インド',
+                        "jy" : '',
+                        "cn" : '印度',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'インドネシア',
+                        "jy" : '',
+                        "cn" : '印度尼西亚',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'かんこく',
+                        "jy" : '韓国',
+                        "cn" : '韩国',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'ちゅうごく',
+                        "jy" : '中国',
+                        "cn" : '中国',
+                        "st" : 'y'
                     }
+                    ,
+                    {
+                        "jp" : 'フィリピン',
+                        "jy" : '',
+                        "cn" : '菲律宾',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'タイ',
+                        "jy" : '',
+                        "cn" : '泰国',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'マレーシア',
+                        "jy" : '',
+                        "cn" : '马来西亚',
+                        "st" : 'y'
+                    }
+                    ,
+                    {
+                        "jp" : 'じん',
+                        "jy" : '人',
+                        "cn" : '人',
+                        "st" : 'y'
+                    }
+                    ,
+                    {
+                        "jp" : 'おはようございます',
+                        "jy" : '',
+                        "cn" : '早上好',
+                        "st" : 'y'
+                    }
+                    ,
+                    {
+                        "jp" : 'はじめまして',
+                        "jy" : '',
+                        "cn" : '初次见面',
+                        "st" : 'y'
+                    }
+                    ,
+                    {
+                        "jp" : 'どうぞよろしく',
+                        "jy" : '',
+                        "cn" : '请多关照',
+                        "st" : 'y'
+                    }
+
                 ]
             },
             {"class" : "第 2 課",
                  "word" : [
                     {
-                        "jp" : 'わたし2',
-                        "jy" : '私2',
-                        "cn" : '我2',
+                        "jp" : 'これ',
+                        "jy" : 'これ',
+                        "cn" : '这，这个（代词）',
                         "st" : 'y'
                     },
                     
                     {
-                        "jp" : 'わたしたち2',
-                        "jy" : '私逹2',
-                        "cn" : '我们2',
+                        "jp" : 'それ',
+                        "jy" : 'それ',
+                        "cn" : '那，那个（代词）',
                         "st" : 'y'
                     },
                     {
-                        "jp" : 'あなた2',
-                        "jy" : '',
-                        "cn" : '你2',
+                        "jp" : 'あれ',
+                        "jy" : 'あれ',
+                        "cn" : '那，那个（代词）',
                         "st" : 'y'
                     },
                     {
-                        "jp" : 'あのひと2',
+                        "jp" : 'この',
+                        "jy" : 'この',
+                        "cn" : '这，这个（连词）',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'その',
+                        "jy" : 'その',
+                        "cn" : '那，那个（连词）',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'あの',
+                        "jy" : 'あの',
+                        "cn" : '那，那个（连词）',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'ほん',
+                        "jy" : '本',
+                        "cn" : '书',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'ざっし',
+                        "jy" : '雑誌',
+                        "cn" : '杂志',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'じしょ',
+                        "jy" : '辞書',
+                        "cn" : '字典',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'ノード',
                         "jy" : '',
-                        "cn" : '那个人2',
+                        "cn" : '笔记本',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'かみ',
+                        "jy" : '紙',
+                        "cn" : '纸',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'しんぶん',
+                        "jy" : '新聞',
+                        "cn" : '报纸',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'てがみ',
+                        "jy" : '手紙',
+                        "cn" : '信',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'えんぴつ',
+                        "jy" : '鉛筆',
+                        "cn" : '铅笔',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'ボールペン',
+                        "jy" : '',
+                        "cn" : '圆珠笔',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'シャープペンシル',
+                        "jy" : '',
+                        "cn" : '自动铅笔',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'タバコ',
+                        "jy" : '',
+                        "cn" : '香烟',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'マッチ',
+                        "jy" : '',
+                        "cn" : '火柴',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'ライター',
+                        "jy" : '',
+                        "cn" : '打火机',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'はいざら',
+                        "jy" : '灰皿',
+                        "cn" : '烟灰缸',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'かぎ',
+                        "jy" : '鍵',
+                        "cn" : '钥匙 ',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'とけい',
+                        "jy" : '時計',
+                        "cn" : '钟',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'かばん',
+                        "jy" : '鞄',
+                        "cn" : '包',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'はこ',
+                        "jy" : '箱',
+                        "cn" : '箱子',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'テープレコーダ',
+                        "jy" : '',
+                        "cn" : '录音机',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'でんわ',
+                        "jy" : '電話',
+                        "cn" : '电话',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'いす',
+                        "jy" : '椅子',
+                        "cn" : '椅子',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'つくえ',
+                        "jy" : '机',
+                        "cn" : '桌子',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'まど',
+                        "jy" : '窓',
+                        "cn" : '窗户',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'ドア',
+                        "jy" : '',
+                        "cn" : '门',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'ラジオ',
+                        "jy" : '',
+                        "cn" : '收音机',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'テレビ',
+                        "jy" : '',
+                        "cn" : '电视机',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'カメラ',
+                        "jy" : '',
+                        "cn" : '照相机',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'なん',
+                        "jy" : '何',
+                        "cn" : '什么',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'そう',
+                        "jy" : 'そう',
+                        "cn" : '是的',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'おねがいします',
+                        "jy" : 'お願いします',
+                        "cn" : '拜托了',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'どうぞ',
+                        "jy" : 'どうぞ',
+                        "cn" : '请',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'どうもありがとうございます',
+                        "jy" : 'どうもありがとうございます',
+                        "cn" : '十分感谢，多谢您',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'あ',
+                        "jy" : 'あ',
+                        "cn" : '啊（感叹词）',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'ちょっと',
+                        "jy" : 'ちょっと',
+                        "cn" : '一会儿 ',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'まってください',
+                        "jy" : '待って下さい',
+                        "cn" : '请等一下',
+                        "st" : 'y'
+                    },
+                    {
+                        "jp" : 'ちがいます',
+                        "jy" : '違います',
+                        "cn" : '不是，错了',
                         "st" : 'y'
                     }
                 ]
@@ -228,7 +609,6 @@
                     }
                 ]
             }
-        
            ];
 
      $(function() {
@@ -300,6 +680,8 @@
         });
   </script>
 
+<script src="js/cover.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>
 
