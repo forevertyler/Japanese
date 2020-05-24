@@ -4,6 +4,9 @@
      line-height: 0.6rem;
      margin-left: 0.2rem;
 }
+.startcn,.txt,.answerTxt p{
+  font-size: .2rem;
+}
  .startcn,.answer,.cnjp{
      width: 2rem;
      height: 0.4rem;
