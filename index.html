@@ -125,9 +125,12 @@
 
 <script>
 var swiper = new Swiper('.swiper-container1', {
-	autoplay: 3000,
-
-  loop : true
+	autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+	centeredSlides: true,
+    loop : true
 });
 
 </script>
